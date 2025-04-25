@@ -15,6 +15,9 @@ public class Persona {
 		this.nombre = nombre;
 		this.listaVehiculos = listaVehiculos;
 	}
+
+
+	///  getters y setters
 	public int getDni() {
 		return dni;
 	}
