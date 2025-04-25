@@ -2,63 +2,54 @@ package modelo;
 
 import interfaces.INodo;
 
-
+// Clase Nodo que implementa la interfaz INodo
 public class Nodo implements INodo {
-    //private int dato;
-	private Vehiculo dato;
-    private INodo siguiente; //INodo
-    private INodo anterior; 
+	private Vehiculo dato;        // Dato del nodo (un vehículo)
+	private INodo siguiente;      // Referencia al siguiente nodo
+	private INodo anterior;       // Referencia al nodo anterior
 
-  //el constructor del nodo siempre lo hacemos asi no necesitamos el nodo siguiente en los parametros y abajo le ponemos null
-  	
-  	//Tambien existen los destructores para desalojar memoria q vienen incluidos en la JVM
-  	
-  	
-  	public INodo getSiguiente() {
-  		return siguiente;
-  	}
-  	public Nodo(Vehiculo dato) {
-	super();
-	this.dato = dato;
-	this.siguiente = null;
-	this.anterior = null;
-}
-	public INodo getAnterior() {
-		return anterior;
+	// Constructor
+	public Nodo(Vehiculo dato) {
+		this.dato = dato;
+		this.siguiente = null;
+		this.anterior = null;
 	}
 
-	public void setAnterior(INodo anterior) {
-		this.anterior = anterior;
-	}
+	// Métodos de la interfaz INodo
 
-	public void setSiguiente(INodo siguiente) {
-  		this.siguiente = siguiente;
-  	}
-
-
-	
-
+	@Override
 	public Vehiculo getDato() {
 		return dato;
 	}
+
+	@Override
 	public void setDato(Vehiculo dato) {
 		this.dato = dato;
 	}
 
+	@Override
+	public INodo getSiguiente() {
+		return siguiente;
+	}
 
 	@Override
-	public String toString() {
-		return "Nodo [dato=" + dato + ", siguiente=" + siguiente + ", anterior=" + anterior + "]";
+	public void setSiguiente(INodo siguiente) {
+		this.siguiente = siguiente;
 	}
-	
-	
-  	
-  	
-  	
-  	
+
+	@Override
+	public INodo getAnterior() {
+		return anterior;
+	}
+
+	@Override
+	public void setAnterior(INodo anterior) {
+		this.anterior = anterior;
+	}
+
+	// Para mostrar el nodo como string
+	@Override
+	public String toString() {
+		return dato.toString();
+	}
 }
-
-
-
-
-//iriarte

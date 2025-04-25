@@ -27,10 +27,19 @@ public INodo getPrimero();
 	 public boolean estaVacia();
 	 public   int cantidadElementos();
 	 public void mostrarLista();
+
+
+	public Vehiculo buscarVehiculoPorPatente(String patente);
+
+	public boolean eliminarVehiculoPorPatente(String patente);
+
+	public void mostrarReversa();
+
+	public Vehiculo obtenerGenerico(int pos);
+
+	public boolean eliminarGenerico(Vehiculo v);
+
+	public void ordenar();
 	
-	 
-	
-	
-	
-	
+
 }
